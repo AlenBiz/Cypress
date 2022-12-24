@@ -6,10 +6,11 @@
   "scripts": {
     "cy:run": "cypress run",
     "cy:open": "cypress open",
-    "cy:db": "cypress run --record --key 8f248870-98aa-4e03-b768-0438820b7289",
-    "cy:run:first": "npm run sy:run --spec 'cypress/e2e/first.cy.js' --browser chrome",
+    "cy:db": "cy:run --record --key 8f248870-98aa-4e03-b768-0438820b7289",
+    "cy:run:first": "npx cypress run --spec 'cypress/e2e/first.cy.js' --browser chrome",
     "cy:run:second": "npx cypress run --spec 'cypress/e2e/second.cy.js' --browser electron",
-    "cy:run all": "npm run cy:run:first && npm run cy:run:second"
+    "cy:run:all": "npm run cy:run:first && npm run cy:run:second",
+    "cy:run:all:db": "npm run cy:run:all --record --key 8f248870-98aa-4e03-b768-0438820b7289"
 
   },
   "repository": {
