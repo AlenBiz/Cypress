@@ -1,12 +1,8 @@
 describe("Testing for HW 15", () => {
   beforeEach("Visit", () => {
-    cy.visit("/login");
-    cy.get('input[name="email"]').type("testbizyaev@gmail.com");
-    cy.get('input[name="password"]').type("rty123");
-    cy.get(
-      "#root > div.layout-1 > section.layout-1__main-wrapper > div.layout-1__main > section > div > section > div > div.form-auth__button > div"
-    ).click();
-    cy.get("#root").should("have.length", 1);
+   cy.loginSanta({ email: 'testbizyaev@gmail.com', password: 'rty123'});
+ 
+   
   });
   it("BOX", () => {
     cy.get(
