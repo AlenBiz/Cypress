@@ -1,9 +1,11 @@
 describe("Testing for HW 15", () => {
-  beforeEach("Visit", () => {
-   cy.loginSanta({ email: 'testbizyaev@gmail.com', password: 'rty123'});
- 
-   
+  before("Hello, tester!", () => {
+    cy.log("Hello, tester!");
   });
+  beforeEach("Login", () => {
+    cy.loginSanta({ email: "testbizyaev@gmail.com", password: "rty123" });
+  });
+ 
   it("BOX", () => {
     cy.get(
       "#root > div.layout-1 > section.layout-1__header-wrapper-fixed > header > section > div > div > a:nth-child(1) > div"
